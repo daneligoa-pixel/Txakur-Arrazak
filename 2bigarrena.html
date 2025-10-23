@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Bigarren Orria</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #003366; }
+        nav a { margin-right: 10px; font-weight: bold; text-decoration: none; color: #6cf3cd; }
+        .txikia {
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .handia {
+            width: 400px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(253, 225, 163);">
+    <h1>Artzai Alemaniarra</h1>
+    <nav>
+        <a href="1sarrera.html">Sarrera</a>
+        <a href="1lehena.html">Lehena</a>
+        <a href="3hirugarrena.html">Hirugarrena</a>
+    </nav>
+
+    <h2>Irudia</h2>
+    <img src="./argazkia.jpg" alt="Irudi txikia" onclick="handitu(this)" class="txikia">
+
+    <script>
+        function handitu(irudia) {
+            if (irudia.classList.contains("txikia")) {
+                irudia.classList.remove("txikia");
+                irudia.classList.add("handia");
+            } else {
+                irudia.classList.remove("handia");
+                irudia.classList.add("txikia");
+            }
+        }
+    </script>
+
+    <h2>Bideoa</h2>
+    <video controls width="320">
+        <source src="./bideoa.mp4" type="video/mp4">
+        Zure nabigatzaileak ez du bideoa erakusten.
+    </video>
+
+    <h2>Audioa</h2>
+    <audio controls>
+        <source src="./musika.mp3" type="audio/mpeg">
+        Zure nabigatzaileak ez du audioa erakusten.
+    </audio>
+</body>
+</html>
+
